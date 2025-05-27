@@ -1,7 +1,7 @@
 name: graphtracks_client
 version: 1.0.0-dev-1
 description: GraphTracks API Bluesky Analytics client for Dart
-homepage: https://github.com/graphtracks/graphtracks-client-dart
+homepage: https://github.com/graphtracks/analytics-sdk-dart
 
 
 environment:

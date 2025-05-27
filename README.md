@@ -162,7 +162,7 @@ Authentication schemes defined for the API:
 ## Author
 
 > [!WARNING]
-> This project, `analytics-sdk`, is an independent, open-source software development kit designed to interact with Graphtracks API. It is not affiliated with, endorsed by, or sponsored by Bluesky PBC or any of its subsidiaries.
+> This project, `analytics-sdk-dart`, is an independent, open-source software development kit designed to interact with Graphtracks API. It is not affiliated with, endorsed by, or sponsored by Bluesky PBC or any of its subsidiaries.
 >
 > "Bluesky" and related marks are trademarks of their respective owners. Use of these names is solely for descriptive purposes to indicate compatibility and does not imply any official endorsement.
 >
