@@ -159,8 +159,6 @@ Authentication schemes defined for the API:
 - **Location**: HTTP header
 
 
-## Author
-
 > [!WARNING]
 > This project, `analytics-sdk-dart`, is an independent, open-source software development kit designed to interact with Graphtracks API. It is not affiliated with, endorsed by, or sponsored by Bluesky PBC or any of its subsidiaries.
 >
