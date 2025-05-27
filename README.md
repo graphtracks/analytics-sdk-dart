@@ -1,6 +1,6 @@
 # graphtracks_client
 
-Graphtracks analytics sdk client for Dart allows get varios Bluesky Social analytics Statistics
+**Dart SDK for Bluesky Social Media Analytics** - analytics client library that enables developers to access detailed Bluesky social network statistics, user engagement metrics, and growth analytics through the GraphTracks API.
 
 This is work in progress. Please contact support@graphtracks.com to get the key or join our [Discord](https://discord.gg/6ghZTfhW9s)
 
