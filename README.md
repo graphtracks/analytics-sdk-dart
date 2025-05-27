@@ -2,7 +2,7 @@
 
 Graphtracks analytics sdk client for Dart allows get varios Bluesky Social analytics Statistics
 
-This is work in progress. Please contact support@graphtracks.com to get the key
+This is work in progress. Please contact support@graphtracks.com to get the key or join our [Discord](https://discord.gg/6ghZTfhW9s)
 
 
 ## Requirements
