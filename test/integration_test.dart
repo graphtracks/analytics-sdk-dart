@@ -13,7 +13,7 @@ void main() {
     setUpAll(() {
       apiKey = Platform.environment['GRAPHTRACKS_API_KEY'] ?? '';
       testDid = Platform.environment['TEST_DID'] ?? 'did:plc:example123';
-      
+
       if (apiKey.isEmpty) {
         throw Exception('GRAPHTRACKS_API_KEY environment variable is required');
       }
@@ -40,7 +40,7 @@ void main() {
 
       expect(response.data, isNotNull);
       expect(response.data, isA<Iterable<DataPoint>>());
-      
+
       if (response.data!.isNotEmpty) {
         final firstDataPoint = response.data!.first;
         expect(firstDataPoint.time, isNotNull);
@@ -65,7 +65,7 @@ void main() {
 
       expect(response.data, isNotNull);
       expect(response.data, isA<Iterable<DataPoint>>());
-      
+
       if (response.data!.isNotEmpty) {
         final firstDataPoint = response.data!.first;
         expect(firstDataPoint.time, isNotNull);
@@ -90,7 +90,7 @@ void main() {
 
       expect(response.data, isNotNull);
       expect(response.data, isA<Iterable<DataPoint>>());
-      
+
       if (response.data!.isNotEmpty) {
         final firstDataPoint = response.data!.first;
         expect(firstDataPoint.time, isNotNull);
@@ -115,7 +115,7 @@ void main() {
 
       expect(response.data, isNotNull);
       expect(response.data, isA<Iterable<DataPoint>>());
-      
+
       if (response.data!.isNotEmpty) {
         final firstDataPoint = response.data!.first;
         expect(firstDataPoint.time, isNotNull);
@@ -161,4 +161,4 @@ void main() {
       );
     });
   });
-} 
+}
