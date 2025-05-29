@@ -43,7 +43,7 @@ class _$MetricMeta {
   BuiltSet<Metric> get values => _$values;
 }
 
-mixin _$MetricMixin {
+abstract class _$MetricMixin {
   // ignore: non_constant_identifier_names
   _$MetricMeta get Metric => const _$MetricMeta();
 }

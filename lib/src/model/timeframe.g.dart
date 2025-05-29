@@ -53,7 +53,7 @@ class _$TimeframeMeta {
   BuiltSet<Timeframe> get values => _$values;
 }
 
-mixin _$TimeframeMixin {
+abstract class _$TimeframeMixin {
   // ignore: non_constant_identifier_names
   _$TimeframeMeta get Timeframe => const _$TimeframeMeta();
 }

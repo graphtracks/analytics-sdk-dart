@@ -5,6 +5,7 @@
 This is work in progress. Please contact support@graphtracks.com to get the key or join our [Discord](https://discord.gg/6ghZTfhW9s)
 
 
+
 ## Requirements
 
 * Dart 2.15.0+ or Flutter 2.8.0+
@@ -16,7 +17,7 @@ This is work in progress. Please contact support@graphtracks.com to get the key 
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  graphtracks_client: 1.0.0-dev.6
+  graphtracks_client: 1.0.0-dev.7
 ```
 
 ### Github
@@ -36,8 +37,12 @@ dependencies:
   graphtracks_client:
     path: /path/to/graphtracks_client
 ```
-
 ## Getting Started
+
+### Getting API key
+
+- Register on https://www.graphtracks.com
+- For period of closed beta, contact support@graphtracks.com to get the key
 
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
@@ -125,10 +130,6 @@ Future<void> main(List<String> args) async {
 
 ```
 
-## Getting API key
-
-* Register on https://www.graphtracks.com
-* For period of closed beta, contact support@graphtracks.com to get the key
 
 ## Documentation for API Endpoints
 
@@ -158,6 +159,8 @@ Authentication schemes defined for the API:
 - **API key parameter name**: X-API-Key
 - **Location**: HTTP header
 
+
+## Remarks
 
 > [!WARNING]
 > This project, `analytics-sdk-dart`, is an independent, open-source software development kit designed to interact with Graphtracks API. It is not affiliated with, endorsed by, or sponsored by Bluesky PBC or any of its subsidiaries.
