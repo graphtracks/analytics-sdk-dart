@@ -28,7 +28,7 @@ class _$NetworkMeta {
   BuiltSet<Network> get values => _$values;
 }
 
-mixin _$NetworkMixin {
+abstract class _$NetworkMixin {
   // ignore: non_constant_identifier_names
   _$NetworkMeta get Network => const _$NetworkMeta();
 }
