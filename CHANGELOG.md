@@ -15,6 +15,31 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`graphtracks_client` - `v1.0.0-dev.6`](#graphtracks_client---v100-dev6)
+
+---
+
+#### `graphtracks_client` - `v1.0.0-dev.6`
+
+ - **FIX**: syntax issues.
+
+## 1.0.0-dev.6
+
+ - **FIX**: syntax issues.
+
+
+## 2025-05-29
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`graphtracks_client` - `v1.0.0-dev.5`](#graphtracks_client---v100-dev5)
 
 ---
