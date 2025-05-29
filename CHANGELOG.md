@@ -15,6 +15,33 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`graphtracks_client` - `v1.0.0-dev.8`](#graphtracks_client---v100-dev8)
+
+---
+
+#### `graphtracks_client` - `v1.0.0-dev.8`
+
+ - **FIX**: pass env to test.
+ - **FEAT**: update client (#2).
+
+## 1.0.0-dev.8
+
+ - **FIX**: pass env to test.
+ - **FEAT**: update client (#2).
+
+
+## 2025-05-29
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`graphtracks_client` - `v1.0.0-dev.7`](#graphtracks_client---v100-dev7)
 
 ---
