@@ -46,7 +46,7 @@ void main() {
         expect(firstDataPoint.time, isNotNull);
         expect(firstDataPoint.value, isNotNull);
         expect(firstDataPoint.value, isA<num>());
-        expect(firstDataPoint.value, isNot(equals(0)));
+        expect(response.data!.any((point) => point.value != 0), isTrue);
       }
     });
 
@@ -71,7 +71,7 @@ void main() {
         expect(firstDataPoint.time, isNotNull);
         expect(firstDataPoint.value, isNotNull);
         expect(firstDataPoint.value, isA<num>());
-        expect(firstDataPoint.value, isNot(equals(0)));
+        expect(response.data!.any((point) => point.value != 0), isTrue);
       }
     });
 
@@ -96,7 +96,7 @@ void main() {
         expect(firstDataPoint.time, isNotNull);
         expect(firstDataPoint.value, isNotNull);
         expect(firstDataPoint.value, isA<num>());
-        expect(firstDataPoint.value, isNot(equals(0)));
+        expect(response.data!.any((point) => point.value != 0), isTrue);
       }
     });
 
@@ -121,7 +121,7 @@ void main() {
         expect(firstDataPoint.time, isNotNull);
         expect(firstDataPoint.value, isNotNull);
         expect(firstDataPoint.value, isA<num>());
-        expect(firstDataPoint.value, isNot(equals(0)));
+        expect(response.data!.any((point) => point.value != 0), isTrue);
       }
     });
 

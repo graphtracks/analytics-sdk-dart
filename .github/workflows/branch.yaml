@@ -16,6 +16,3 @@ jobs:
           GRAPHTRACKS_API_KEY: ${{ secrets.GRAPHTRACKS_API_KEY }}
           TEST_DID: ${{ secrets.TEST_DID }}
       - run: melos analyze
-      - uses: romeovs/lcov-reporter-action@v0.3.1
-        with:
-          lcov-file: ./coverage/lcov.info
