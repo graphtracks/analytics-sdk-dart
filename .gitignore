@@ -39,3 +39,6 @@ pubspec.lock
 
 # Mac
 .DS_Store
+
+coverage/
+.tool-versions

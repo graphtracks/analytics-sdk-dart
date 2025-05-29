@@ -1,7 +1,6 @@
 import 'package:test/test.dart';
 import 'package:graphtracks_client/graphtracks_client.dart';
 
-
 /// tests for BlueSkyAnalyticsApi
 void main() {
   final instance = GraphtracksClient().getBlueSkyAnalyticsApi();
@@ -15,6 +14,5 @@ void main() {
     test('test getGlobalStatsForAccountAPI', () async {
       // TODO
     });
-
   });
 }
