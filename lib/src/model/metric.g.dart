@@ -22,11 +22,11 @@ Metric _$valueOf(String name) {
     case 'reposts':
       return _$reposts;
     default:
-      throw new ArgumentError(name);
+      throw ArgumentError(name);
   }
 }
 
-final BuiltSet<Metric> _$values = new BuiltSet<Metric>(const <Metric>[
+final BuiltSet<Metric> _$values = BuiltSet<Metric>(const <Metric>[
   _$followers,
   _$likes,
   _$replies,
@@ -43,12 +43,12 @@ class _$MetricMeta {
   BuiltSet<Metric> get values => _$values;
 }
 
-abstract class _$MetricMixin {
+mixin _$MetricMixin {
   // ignore: non_constant_identifier_names
   _$MetricMeta get Metric => const _$MetricMeta();
 }
 
-Serializer<Metric> _$metricSerializer = new _$MetricSerializer();
+Serializer<Metric> _$metricSerializer = _$MetricSerializer();
 
 class _$MetricSerializer implements PrimitiveSerializer<Metric> {
   static const Map<String, Object> _toWire = const <String, Object>{

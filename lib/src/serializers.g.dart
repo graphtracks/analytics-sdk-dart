@@ -6,7 +6,7 @@ part of 'serializers.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-Serializers _$serializers = (new Serializers().toBuilder()
+Serializers _$serializers = (Serializers().toBuilder()
       ..add(DataPoint.serializer)
       ..add(GetGlobalStatsForAccountAPI403Response.serializer)
       ..add(Metric.serializer)

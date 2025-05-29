@@ -28,11 +28,11 @@ Timeframe _$valueOf(String name) {
     case 'all':
       return _$all;
     default:
-      throw new ArgumentError(name);
+      throw ArgumentError(name);
   }
 }
 
-final BuiltSet<Timeframe> _$values = new BuiltSet<Timeframe>(const <Timeframe>[
+final BuiltSet<Timeframe> _$values = BuiltSet<Timeframe>(const <Timeframe>[
   _$n1h,
   _$n1d,
   _$n7d,
@@ -53,12 +53,12 @@ class _$TimeframeMeta {
   BuiltSet<Timeframe> get values => _$values;
 }
 
-abstract class _$TimeframeMixin {
+mixin _$TimeframeMixin {
   // ignore: non_constant_identifier_names
   _$TimeframeMeta get Timeframe => const _$TimeframeMeta();
 }
 
-Serializer<Timeframe> _$timeframeSerializer = new _$TimeframeSerializer();
+Serializer<Timeframe> _$timeframeSerializer = _$TimeframeSerializer();
 
 class _$TimeframeSerializer implements PrimitiveSerializer<Timeframe> {
   static const Map<String, Object> _toWire = const <String, Object>{

@@ -13,19 +13,15 @@ class _$DataPoint extends DataPoint {
   final num value;
 
   factory _$DataPoint([void Function(DataPointBuilder)? updates]) =>
-      (new DataPointBuilder()..update(updates))._build();
+      (DataPointBuilder()..update(updates))._build();
 
-  _$DataPoint._({required this.time, required this.value}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(time, r'DataPoint', 'time');
-    BuiltValueNullFieldError.checkNotNull(value, r'DataPoint', 'value');
-  }
-
+  _$DataPoint._({required this.time, required this.value}) : super._();
   @override
   DataPoint rebuild(void Function(DataPointBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  DataPointBuilder toBuilder() => new DataPointBuilder()..replace(this);
+  DataPointBuilder toBuilder() => DataPointBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -78,7 +74,6 @@ class DataPointBuilder implements Builder<DataPoint, DataPointBuilder> {
 
   @override
   void replace(DataPoint other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DataPoint;
   }
 
@@ -92,7 +87,7 @@ class DataPointBuilder implements Builder<DataPoint, DataPointBuilder> {
 
   _$DataPoint _build() {
     final _$result = _$v ??
-        new _$DataPoint._(
+        _$DataPoint._(
           time:
               BuiltValueNullFieldError.checkNotNull(time, r'DataPoint', 'time'),
           value: BuiltValueNullFieldError.checkNotNull(

@@ -14,11 +14,10 @@ class _$GetGlobalStatsForAccountAPI403Response
   factory _$GetGlobalStatsForAccountAPI403Response(
           [void Function(GetGlobalStatsForAccountAPI403ResponseBuilder)?
               updates]) =>
-      (new GetGlobalStatsForAccountAPI403ResponseBuilder()..update(updates))
+      (GetGlobalStatsForAccountAPI403ResponseBuilder()..update(updates))
           ._build();
 
   _$GetGlobalStatsForAccountAPI403Response._({this.error}) : super._();
-
   @override
   GetGlobalStatsForAccountAPI403Response rebuild(
           void Function(GetGlobalStatsForAccountAPI403ResponseBuilder)
@@ -27,7 +26,7 @@ class _$GetGlobalStatsForAccountAPI403Response
 
   @override
   GetGlobalStatsForAccountAPI403ResponseBuilder toBuilder() =>
-      new GetGlobalStatsForAccountAPI403ResponseBuilder()..replace(this);
+      GetGlobalStatsForAccountAPI403ResponseBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -78,7 +77,6 @@ class GetGlobalStatsForAccountAPI403ResponseBuilder
 
   @override
   void replace(GetGlobalStatsForAccountAPI403Response other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GetGlobalStatsForAccountAPI403Response;
   }
 
@@ -93,7 +91,7 @@ class GetGlobalStatsForAccountAPI403ResponseBuilder
 
   _$GetGlobalStatsForAccountAPI403Response _build() {
     final _$result = _$v ??
-        new _$GetGlobalStatsForAccountAPI403Response._(
+        _$GetGlobalStatsForAccountAPI403Response._(
           error: error,
         );
     replace(_$result);

@@ -13,11 +13,11 @@ Network _$valueOf(String name) {
     case 'blueSky':
       return _$blueSky;
     default:
-      throw new ArgumentError(name);
+      throw ArgumentError(name);
   }
 }
 
-final BuiltSet<Network> _$values = new BuiltSet<Network>(const <Network>[
+final BuiltSet<Network> _$values = BuiltSet<Network>(const <Network>[
   _$blueSky,
 ]);
 
@@ -28,12 +28,12 @@ class _$NetworkMeta {
   BuiltSet<Network> get values => _$values;
 }
 
-abstract class _$NetworkMixin {
+mixin _$NetworkMixin {
   // ignore: non_constant_identifier_names
   _$NetworkMeta get Network => const _$NetworkMeta();
 }
 
-Serializer<Network> _$networkSerializer = new _$NetworkSerializer();
+Serializer<Network> _$networkSerializer = _$NetworkSerializer();
 
 class _$NetworkSerializer implements PrimitiveSerializer<Network> {
   static const Map<String, Object> _toWire = const <String, Object>{

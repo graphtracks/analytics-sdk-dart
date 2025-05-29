@@ -10,25 +10,23 @@ import 'package:built_value/serializer.dart';
 part 'metric.g.dart';
 
 class Metric extends EnumClass {
+
   /// The metric to get stats for
   @BuiltValueEnumConst(wireName: r'followers')
   static const Metric followers = _$followers;
-
   /// The metric to get stats for
   @BuiltValueEnumConst(wireName: r'likes')
   static const Metric likes = _$likes;
-
   /// The metric to get stats for
   @BuiltValueEnumConst(wireName: r'replies')
   static const Metric replies = _$replies;
-
   /// The metric to get stats for
   @BuiltValueEnumConst(wireName: r'reposts')
   static const Metric reposts = _$reposts;
 
   static Serializer<Metric> get serializer => _$metricSerializer;
 
-  const Metric._(String name) : super(name);
+  const Metric._(String name): super(name);
 
   static BuiltSet<Metric> get values => _$values;
   static Metric valueOf(String name) => _$valueOf(name);
@@ -41,3 +39,4 @@ class Metric extends EnumClass {
 ///
 /// Trigger mixin generation by writing a line like this one next to your enum.
 abstract class MetricMixin = Object with _$MetricMixin;
+

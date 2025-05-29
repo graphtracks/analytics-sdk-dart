@@ -11,36 +11,26 @@ part 'get_global_stats_for_account_api403_response.g.dart';
 /// GetGlobalStatsForAccountAPI403Response
 ///
 /// Properties:
-/// * [error]
+/// * [error] 
 @BuiltValue()
-abstract class GetGlobalStatsForAccountAPI403Response
-    implements
-        Built<GetGlobalStatsForAccountAPI403Response,
-            GetGlobalStatsForAccountAPI403ResponseBuilder> {
+abstract class GetGlobalStatsForAccountAPI403Response implements Built<GetGlobalStatsForAccountAPI403Response, GetGlobalStatsForAccountAPI403ResponseBuilder> {
   @BuiltValueField(wireName: r'error')
   String? get error;
 
   GetGlobalStatsForAccountAPI403Response._();
 
-  factory GetGlobalStatsForAccountAPI403Response(
-          [void updates(GetGlobalStatsForAccountAPI403ResponseBuilder b)]) =
-      _$GetGlobalStatsForAccountAPI403Response;
+  factory GetGlobalStatsForAccountAPI403Response([void updates(GetGlobalStatsForAccountAPI403ResponseBuilder b)]) = _$GetGlobalStatsForAccountAPI403Response;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(GetGlobalStatsForAccountAPI403ResponseBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<GetGlobalStatsForAccountAPI403Response> get serializer =>
-      _$GetGlobalStatsForAccountAPI403ResponseSerializer();
+  static Serializer<GetGlobalStatsForAccountAPI403Response> get serializer => _$GetGlobalStatsForAccountAPI403ResponseSerializer();
 }
 
-class _$GetGlobalStatsForAccountAPI403ResponseSerializer
-    implements PrimitiveSerializer<GetGlobalStatsForAccountAPI403Response> {
+class _$GetGlobalStatsForAccountAPI403ResponseSerializer implements PrimitiveSerializer<GetGlobalStatsForAccountAPI403Response> {
   @override
-  final Iterable<Type> types = const [
-    GetGlobalStatsForAccountAPI403Response,
-    _$GetGlobalStatsForAccountAPI403Response
-  ];
+  final Iterable<Type> types = const [GetGlobalStatsForAccountAPI403Response, _$GetGlobalStatsForAccountAPI403Response];
 
   @override
   final String wireName = r'GetGlobalStatsForAccountAPI403Response';
@@ -65,9 +55,7 @@ class _$GetGlobalStatsForAccountAPI403ResponseSerializer
     GetGlobalStatsForAccountAPI403Response object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object,
-            specifiedType: specifiedType)
-        .toList();
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
   }
 
   void _deserializeProperties(
@@ -117,3 +105,4 @@ class _$GetGlobalStatsForAccountAPI403ResponseSerializer
     return result.build();
   }
 }
+

@@ -10,13 +10,14 @@ import 'package:built_value/serializer.dart';
 part 'network.g.dart';
 
 class Network extends EnumClass {
+
   /// The network to get stats for. Currently only BlueSky is supported.
   @BuiltValueEnumConst(wireName: r'BlueSky')
   static const Network blueSky = _$blueSky;
 
   static Serializer<Network> get serializer => _$networkSerializer;
 
-  const Network._(String name) : super(name);
+  const Network._(String name): super(name);
 
   static BuiltSet<Network> get values => _$values;
   static Network valueOf(String name) => _$valueOf(name);
@@ -29,3 +30,4 @@ class Network extends EnumClass {
 ///
 /// Trigger mixin generation by writing a line like this one next to your enum.
 abstract class NetworkMixin = Object with _$NetworkMixin;
+

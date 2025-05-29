@@ -15,6 +15,7 @@ import 'package:graphtracks_client/src/model/network.dart';
 import 'package:graphtracks_client/src/model/timeframe.dart';
 
 class BlueSkyAnalyticsApi {
+
   final Dio _dio;
 
   final Serializers _serializers;
@@ -41,7 +42,7 @@ class BlueSkyAnalyticsApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<DataPoint>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuiltList<DataPoint>>> getGlobalStatsForAccountAPI({
+  Future<Response<BuiltList<DataPoint>>> getGlobalStatsForAccountAPI({ 
     required Network network,
     required String accountId,
     required Metric metric,
@@ -56,23 +57,7 @@ class BlueSkyAnalyticsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path =
-        r'/v1/api/networks/{network}/accounts/{account_id}/stats/{metric}'
-            .replaceAll(
-                '{' r'network' '}',
-                encodeQueryParameter(
-                        _serializers, network, const FullType(Network))
-                    .toString())
-            .replaceAll(
-                '{' r'account_id' '}',
-                encodeQueryParameter(
-                        _serializers, accountId, const FullType(String))
-                    .toString())
-            .replaceAll(
-                '{' r'metric' '}',
-                encodeQueryParameter(
-                        _serializers, metric, const FullType(Metric))
-                    .toString());
+    final _path = r'/v1/api/networks/{network}/accounts/{account_id}/stats/{metric}'.replaceAll('{' r'network' '}', encodeQueryParameter(_serializers, network, const FullType(Network)).toString()).replaceAll('{' r'account_id' '}', encodeQueryParameter(_serializers, accountId, const FullType(String)).toString()).replaceAll('{' r'metric' '}', encodeQueryParameter(_serializers, metric, const FullType(Metric)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -93,16 +78,10 @@ class BlueSkyAnalyticsApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (timeframe != null)
-        r'timeframe': encodeQueryParameter(
-            _serializers, timeframe, const FullType(Timeframe)),
-      r'from':
-          encodeQueryParameter(_serializers, from, const FullType(DateTime)),
-      if (to != null)
-        r'to': encodeQueryParameter(_serializers, to, const FullType(DateTime)),
-      if (bucket != null)
-        r'bucket':
-            encodeQueryParameter(_serializers, bucket, const FullType(String)),
+      if (timeframe != null) r'timeframe': encodeQueryParameter(_serializers, timeframe, const FullType(Timeframe)),
+      r'from': encodeQueryParameter(_serializers, from, const FullType(DateTime)),
+      if (to != null) r'to': encodeQueryParameter(_serializers, to, const FullType(DateTime)),
+      if (bucket != null) r'bucket': encodeQueryParameter(_serializers, bucket, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(
@@ -118,12 +97,11 @@ class BlueSkyAnalyticsApi {
 
     try {
       final rawResponse = _response.data;
-      _responseData = rawResponse == null
-          ? null
-          : _serializers.deserialize(
-              rawResponse,
-              specifiedType: const FullType(BuiltList, [FullType(DataPoint)]),
-            ) as BuiltList<DataPoint>;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(DataPoint)]),
+      ) as BuiltList<DataPoint>;
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -145,4 +123,5 @@ class BlueSkyAnalyticsApi {
       extra: _response.extra,
     );
   }
+
 }

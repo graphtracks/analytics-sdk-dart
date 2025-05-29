@@ -16,7 +16,7 @@ This is work in progress. Please contact support@graphtracks.com to get the key 
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  graphtracks_client: 1.0.0-dev-1
+  graphtracks_client: 1.0.0-dev.6
 ```
 
 ### Github
