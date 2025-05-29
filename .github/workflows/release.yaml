@@ -28,6 +28,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.RELEASE_BOT_GITHUB_TOKEN }}
       - run: melos test
+        env:
+          GRAPHTRACKS_API_KEY: ${{ secrets.GRAPHTRACKS_API_KEY }}
+          TEST_DID: ${{ secrets.TEST_DID }}
       - run: melos analyze
       - name: Push Tags
         run: git push --follow-tags
