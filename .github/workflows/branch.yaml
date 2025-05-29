@@ -11,3 +11,8 @@ jobs:
       - uses: dart-lang/setup-dart@v1
       - uses: bluefireteam/melos-action@v3
       - run: melos format --output=none --set-exit-if-changed .
+      - run: melos test
+        env:
+          GRAPHTRACKS_API_KEY: ${{ secrets.GRAPHTRACKS_API_KEY }}
+          TEST_DID: ${{ secrets.TEST_DID }}
+      - run: melos analyze

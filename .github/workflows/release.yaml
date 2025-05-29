@@ -27,5 +27,7 @@ jobs:
           create-pr: false
         env:
           GH_TOKEN: ${{ secrets.RELEASE_BOT_GITHUB_TOKEN }}
+      - run: melos test
+      - run: melos analyze
       - name: Push Tags
         run: git push --follow-tags
