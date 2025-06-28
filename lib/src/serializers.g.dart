@@ -7,10 +7,19 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (Serializers().toBuilder()
+      ..add($Post.serializer)
+      ..add($PostData.serializer)
+      ..add(CreateNetworkAccountRequest.serializer)
+      ..add(CreateNetworkAccountRequestNetworkEnum.serializer)
       ..add(DataPoint.serializer)
-      ..add(GetGlobalStatsForAccountAPI403Response.serializer)
+      ..add(DeleteNetworkAccount201Response.serializer)
+      ..add(GetNetworkAccount404Response.serializer)
+      ..add(Interaction.serializer)
       ..add(Metric.serializer)
       ..add(Network.serializer)
+      ..add(NetworkAccount.serializer)
+      ..add(NetworkAccountNetworkEnum.serializer)
+      ..add(PostsInner.serializer)
       ..add(Timeframe.serializer))
     .build();
 

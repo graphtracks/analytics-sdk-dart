@@ -26,6 +26,10 @@ class Metric extends EnumClass {
   @BuiltValueEnumConst(wireName: r'reposts')
   static const Metric reposts = _$reposts;
 
+  /// The metric to get stats for
+  @BuiltValueEnumConst(wireName: r'engagement')
+  static const Metric engagement = _$engagement;
+
   static Serializer<Metric> get serializer => _$metricSerializer;
 
   const Metric._(String name) : super(name);

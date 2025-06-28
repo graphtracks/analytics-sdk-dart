@@ -6,48 +6,48 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'get_global_stats_for_account_api403_response.g.dart';
+part 'get_network_account404_response.g.dart';
 
-/// GetGlobalStatsForAccountAPI403Response
+/// GetNetworkAccount404Response
 ///
 /// Properties:
 /// * [error]
 @BuiltValue()
-abstract class GetGlobalStatsForAccountAPI403Response
+abstract class GetNetworkAccount404Response
     implements
-        Built<GetGlobalStatsForAccountAPI403Response,
-            GetGlobalStatsForAccountAPI403ResponseBuilder> {
+        Built<GetNetworkAccount404Response,
+            GetNetworkAccount404ResponseBuilder> {
   @BuiltValueField(wireName: r'error')
   String? get error;
 
-  GetGlobalStatsForAccountAPI403Response._();
+  GetNetworkAccount404Response._();
 
-  factory GetGlobalStatsForAccountAPI403Response(
-          [void updates(GetGlobalStatsForAccountAPI403ResponseBuilder b)]) =
-      _$GetGlobalStatsForAccountAPI403Response;
+  factory GetNetworkAccount404Response(
+          [void updates(GetNetworkAccount404ResponseBuilder b)]) =
+      _$GetNetworkAccount404Response;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(GetGlobalStatsForAccountAPI403ResponseBuilder b) => b;
+  static void _defaults(GetNetworkAccount404ResponseBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<GetGlobalStatsForAccountAPI403Response> get serializer =>
-      _$GetGlobalStatsForAccountAPI403ResponseSerializer();
+  static Serializer<GetNetworkAccount404Response> get serializer =>
+      _$GetNetworkAccount404ResponseSerializer();
 }
 
-class _$GetGlobalStatsForAccountAPI403ResponseSerializer
-    implements PrimitiveSerializer<GetGlobalStatsForAccountAPI403Response> {
+class _$GetNetworkAccount404ResponseSerializer
+    implements PrimitiveSerializer<GetNetworkAccount404Response> {
   @override
   final Iterable<Type> types = const [
-    GetGlobalStatsForAccountAPI403Response,
-    _$GetGlobalStatsForAccountAPI403Response
+    GetNetworkAccount404Response,
+    _$GetNetworkAccount404Response
   ];
 
   @override
-  final String wireName = r'GetGlobalStatsForAccountAPI403Response';
+  final String wireName = r'GetNetworkAccount404Response';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    GetGlobalStatsForAccountAPI403Response object, {
+    GetNetworkAccount404Response object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     if (object.error != null) {
@@ -62,7 +62,7 @@ class _$GetGlobalStatsForAccountAPI403ResponseSerializer
   @override
   Object serialize(
     Serializers serializers,
-    GetGlobalStatsForAccountAPI403Response object, {
+    GetNetworkAccount404Response object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object,
@@ -75,7 +75,7 @@ class _$GetGlobalStatsForAccountAPI403ResponseSerializer
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required GetGlobalStatsForAccountAPI403ResponseBuilder result,
+    required GetNetworkAccount404ResponseBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -98,12 +98,12 @@ class _$GetGlobalStatsForAccountAPI403ResponseSerializer
   }
 
   @override
-  GetGlobalStatsForAccountAPI403Response deserialize(
+  GetNetworkAccount404Response deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = GetGlobalStatsForAccountAPI403ResponseBuilder();
+    final result = GetNetworkAccount404ResponseBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

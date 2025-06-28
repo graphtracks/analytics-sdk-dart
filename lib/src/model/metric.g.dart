@@ -10,6 +10,7 @@ const Metric _$followers = const Metric._('followers');
 const Metric _$likes = const Metric._('likes');
 const Metric _$replies = const Metric._('replies');
 const Metric _$reposts = const Metric._('reposts');
+const Metric _$engagement = const Metric._('engagement');
 
 Metric _$valueOf(String name) {
   switch (name) {
@@ -21,6 +22,8 @@ Metric _$valueOf(String name) {
       return _$replies;
     case 'reposts':
       return _$reposts;
+    case 'engagement':
+      return _$engagement;
     default:
       throw ArgumentError(name);
   }
@@ -31,6 +34,7 @@ final BuiltSet<Metric> _$values = BuiltSet<Metric>(const <Metric>[
   _$likes,
   _$replies,
   _$reposts,
+  _$engagement,
 ]);
 
 class _$MetricMeta {
@@ -39,6 +43,7 @@ class _$MetricMeta {
   Metric get likes => _$likes;
   Metric get replies => _$replies;
   Metric get reposts => _$reposts;
+  Metric get engagement => _$engagement;
   Metric valueOf(String name) => _$valueOf(name);
   BuiltSet<Metric> get values => _$values;
 }
@@ -56,12 +61,14 @@ class _$MetricSerializer implements PrimitiveSerializer<Metric> {
     'likes': 'likes',
     'replies': 'replies',
     'reposts': 'reposts',
+    'engagement': 'engagement',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'followers': 'followers',
     'likes': 'likes',
     'replies': 'replies',
     'reposts': 'reposts',
+    'engagement': 'engagement',
   };
 
   @override
