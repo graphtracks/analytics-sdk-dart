@@ -29,13 +29,13 @@ void main() {
       final now = DateTime.now().toUtc();
       final fromDate = now.subtract(Duration(days: 30));
 
-      final response = await analyticsApi.getGlobalStatsForAccountAPI(
+      final response = await analyticsApi.getGlobalStatsForAccount(
         network: Network.blueSky,
         accountId: testDid,
         metric: Metric.followers,
         from: fromDate,
         timeframe: Timeframe.n30d,
-        bucket: (3600 * 24).toString(),
+        bucket: 3600 * 24,
       );
 
       expect(response.data, isNotNull);
@@ -54,13 +54,13 @@ void main() {
       final now = DateTime.now().toUtc();
       final fromDate = now.subtract(Duration(days: 7));
 
-      final response = await analyticsApi.getGlobalStatsForAccountAPI(
+      final response = await analyticsApi.getGlobalStatsForAccount(
         network: Network.blueSky,
         accountId: testDid,
         metric: Metric.likes,
         from: fromDate,
         timeframe: Timeframe.n7d,
-        bucket: (3600 * 12).toString(),
+        bucket: 3600 * 12,
       );
 
       expect(response.data, isNotNull);
@@ -79,13 +79,13 @@ void main() {
       final now = DateTime.now().toUtc();
       final fromDate = now.subtract(Duration(days: 1));
 
-      final response = await analyticsApi.getGlobalStatsForAccountAPI(
+      final response = await analyticsApi.getGlobalStatsForAccount(
         network: Network.blueSky,
         accountId: testDid,
         metric: Metric.replies,
         from: fromDate,
         timeframe: Timeframe.n1d,
-        bucket: (3600 * 6).toString(),
+        bucket: 3600 * 6,
       );
 
       expect(response.data, isNotNull);
@@ -104,13 +104,13 @@ void main() {
       final now = DateTime.now().toUtc();
       final fromDate = now.subtract(Duration(days: 1));
 
-      final response = await analyticsApi.getGlobalStatsForAccountAPI(
+      final response = await analyticsApi.getGlobalStatsForAccount(
         network: Network.blueSky,
         accountId: testDid,
         metric: Metric.reposts,
         from: fromDate,
         timeframe: Timeframe.n1d,
-        bucket: (3600 * 6).toString(),
+        bucket: 3600 * 6,
       );
 
       expect(response.data, isNotNull);
@@ -134,7 +134,7 @@ void main() {
       final fromDate = now.subtract(Duration(days: 1));
 
       expect(
-        () async => await unauthorizedAnalyticsApi.getGlobalStatsForAccountAPI(
+        () async => await unauthorizedAnalyticsApi.getGlobalStatsForAccount(
           network: Network.blueSky,
           accountId: testDid,
           metric: Metric.followers,
@@ -150,7 +150,7 @@ void main() {
       final fromDate = now.subtract(Duration(days: 1));
 
       expect(
-        () async => await analyticsApi.getGlobalStatsForAccountAPI(
+        () async => await analyticsApi.getGlobalStatsForAccount(
           network: Network.blueSky,
           accountId: 'invalid_did',
           metric: Metric.followers,
