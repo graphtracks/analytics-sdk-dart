@@ -93,14 +93,14 @@ Future<void> main(List<String> args) async {
     print('Fetching data from ${fromDate.toIso8601String()} to ${now.toIso8601String()}');
     
     // Get followers stats for a given account
-    final response = await analyticsApi.getGlobalStatsForAccountAPI(
+    final response = await analyticsApi.getGlobalStatsForAccount(
       network: Network.blueSky, // Only BlueSky is supported
       accountId: did, // atproto account did
       metric: Metric.followers, // Metric to query
       from: fromDate, // Start date in UTC - last 7 days
       // to: now, // End date in UTC - now
       timeframe: Timeframe.n30d,
-      bucket: (3600 * 24).toString(), // Interval between datapoints. Keep datapoints count low for UX and performance
+      bucket: 3600 * 24, // Interval between datapoints. Keep datapoints count low for UX and performance
     );
     
     print('Response data: ${response.data}');
