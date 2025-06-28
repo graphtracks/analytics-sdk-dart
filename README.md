@@ -5,6 +5,15 @@
 This is work in progress. Please contact support@graphtracks.com to get the key or join our [Discord](https://discord.gg/6ghZTfhW9s)
 
 
+## Features
+
+* Get stats for a given account by DID 
+* Stats are available for the following metrics:
+    * Followers
+    * Replies
+    * Reposts
+    * Likes
+* More detailed metrics coming soon
 
 ## Requirements
 
@@ -17,7 +26,7 @@ This is work in progress. Please contact support@graphtracks.com to get the key 
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  graphtracks_client: 1.0.0-dev.7
+  graphtracks_client: 1.0.0-dev.8
 ```
 
 ### Github
@@ -137,15 +146,29 @@ All URIs are relative to *https://api.graphtracks.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-[*BlueSkyAnalyticsApi*](doc/BlueSkyAnalyticsApi.md) | [**getGlobalStatsForAccountAPI**](doc/BlueSkyAnalyticsApi.md#getglobalstatsforaccountapi) | **GET** /v1/api/networks/{network}/accounts/{account_id}/stats/{metric} | Growth rate statistics for account
+[*BlueSkyAnalyticsApi*](doc/BlueSkyAnalyticsApi.md) | [**createNetworkAccount**](doc/BlueSkyAnalyticsApi.md#createnetworkaccount) | **POST** /v1/api/networks/account | Create a network account
+[*BlueSkyAnalyticsApi*](doc/BlueSkyAnalyticsApi.md) | [**deleteNetworkAccount**](doc/BlueSkyAnalyticsApi.md#deletenetworkaccount) | **DELETE** /v1/api/networks/accounts/{account_id} | Delete a network account
+[*BlueSkyAnalyticsApi*](doc/BlueSkyAnalyticsApi.md) | [**getGlobalStatsForAccount**](doc/BlueSkyAnalyticsApi.md#getglobalstatsforaccount) | **GET** /v1/api/networks/{network}/accounts/{account_id}/stats/{metric} | Growth rate statistics for account
+[*BlueSkyAnalyticsApi*](doc/BlueSkyAnalyticsApi.md) | [**getNetworkAccount**](doc/BlueSkyAnalyticsApi.md#getnetworkaccount) | **GET** /v1/api/networks/accounts/{account_id} | Get a network account
+[*BlueSkyAnalyticsApi*](doc/BlueSkyAnalyticsApi.md) | [**getNetworkAccounts**](doc/BlueSkyAnalyticsApi.md#getnetworkaccounts) | **GET** /v1/api/networks/accounts | Get network accounts for current user
+[*BlueSkyAnalyticsApi*](doc/BlueSkyAnalyticsApi.md) | [**getPostInteractions**](doc/BlueSkyAnalyticsApi.md#getpostinteractions) | **GET** /v1/api/networks/{network}/accounts/{account_id}/posts/{post_id}/interactions/{metric} | Get post interactions
+[*BlueSkyAnalyticsApi*](doc/BlueSkyAnalyticsApi.md) | [**getPostStats**](doc/BlueSkyAnalyticsApi.md#getpoststats) | **GET** /v1/api/networks/{network}/accounts/{account_id}/posts/{post_id}/stats | Get post statistics
+[*BlueSkyAnalyticsApi*](doc/BlueSkyAnalyticsApi.md) | [**getTopPostsForAccount**](doc/BlueSkyAnalyticsApi.md#gettoppostsforaccount) | **GET** /v1/api/networks/{network}/accounts/{account_id}/top-posts | Get top posts for an account
 
 
 ## Documentation For Models
 
+ - [CreateNetworkAccountRequest](doc/CreateNetworkAccountRequest.md)
  - [DataPoint](doc/DataPoint.md)
- - [GetGlobalStatsForAccountAPI403Response](doc/GetGlobalStatsForAccountAPI403Response.md)
+ - [DeleteNetworkAccount201Response](doc/DeleteNetworkAccount201Response.md)
+ - [GetNetworkAccount404Response](doc/GetNetworkAccount404Response.md)
+ - [Interaction](doc/Interaction.md)
  - [Metric](doc/Metric.md)
  - [Network](doc/Network.md)
+ - [NetworkAccount](doc/NetworkAccount.md)
+ - [Post](doc/Post.md)
+ - [PostData](doc/PostData.md)
+ - [PostsInner](doc/PostsInner.md)
  - [Timeframe](doc/Timeframe.md)
 
 
