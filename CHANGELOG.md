@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2025-06-28
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`graphtracks_client` - `v1.0.0-dev.9`](#graphtracks_client---v100-dev9)
+
+---
+
+#### `graphtracks_client` - `v1.0.0-dev.9`
+
+ - **FEAT**: add per post api (#3).
+
+## 1.0.0-dev.9
+
+ - **FEAT**: add per post api (#3).
+
+
 ## 2025-05-29
 
 ### Changes
