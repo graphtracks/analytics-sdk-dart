@@ -2,18 +2,22 @@
 
 **Dart SDK for Bluesky Social Media Analytics** - analytics client library that enables developers to access detailed Bluesky social network statistics, user engagement metrics, and growth analytics through the GraphTracks API.
 
-This is work in progress. Please contact support@graphtracks.com to get the key or join our [Discord](https://discord.gg/6ghZTfhW9s)
-
 
 ## Features
 
 * Get stats for a given account by DID 
-* Stats are available for the following metrics:
+* Growth Stats are available for the following metrics:
     * Followers
     * Replies
     * Reposts
     * Likes
-* More detailed metrics coming soon
+* Growth Stats available per post:
+    * replies
+    * reposts 
+    * likes
+* Account interactions API
+* Top posts by engagement API
+
 
 ## Requirements
 
@@ -26,7 +30,7 @@ This is work in progress. Please contact support@graphtracks.com to get the key 
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  graphtracks_client: 1.0.0-dev.8
+  graphtracks_client: 1.0.0-dev.10
 ```
 
 ### Github
@@ -48,10 +52,10 @@ dependencies:
 ```
 ## Getting Started
 
-### Getting API key
 
-- Register on https://www.graphtracks.com
-- For period of closed beta, contact support@graphtracks.com to get the key
+To get started, create account on www.graphtracks.com.
+
+Create new API key https://www.graphtracks.com/dashboard/developer/apikeys
 
 Please follow the [installation procedure](#installation--usage) and then run the following:
 

@@ -19,10 +19,12 @@ Future<void> main(List<String> args) async {
     exit(1);
   }
 
+  final apiUrl = Platform.environment['GRAPHTRACKS_API_URL'];
+
   // Initialize API client
-  final api = GraphtracksClient();
-  api.dio.options.connectTimeout = Duration(seconds: 30);
-  api.dio.options.receiveTimeout = Duration(seconds: 30);
+  final api = GraphtracksClient(basePathOverride: apiUrl);
+  api.dio.options.connectTimeout = Duration(seconds: 60);
+  api.dio.options.receiveTimeout = Duration(seconds: 60);
   api.setApiKey('apiKeyAuth', apiKey);
 
   final analyticsApi = api.getBlueSkyAnalyticsApi();
